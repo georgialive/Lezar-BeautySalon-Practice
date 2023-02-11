@@ -1,0 +1,141 @@
+// GLOBAL MIXINS
+
+=overlay($bg-colour, $opacity)
+    z-index: 1
+    position: relative
+    &::before
+        position: absolute
+        content: ""
+        width: 100%
+        height: 100%
+        z-index: -1
+        top: 0
+        left: 0
+        opacity: $opacity
+        background-color: $bg-colour
+
+
+// Column Gap
+=colgap($gap)
+    margin-left: -$gap / 2
+    margin-right: -$gap / 2
+    & > div
+        padding-left: $gap / 2
+        padding-right: $gap / 2
+
+    
+// Make Own Container
+=container($width)
+    max-width: $width
+    margin-left: auto
+    margin-right: auto
+
+
+// Flex Center 
+=flexcenter($justify)
+    display: flex
+    align-items: center
+    justify-content: $justify
+
+
+// Mixing for Size 
+=size($width, $height: $width)
+    width: $width
+    height: $height
+
+
+// Mixing for Box 
+=box($bg, $width, $height: $width)
+    width: $width
+    height: $height
+    background: $bg
+
+// Mixing for Circle 
+=circle($bg, $size)
+    width: $size
+    height: $size
+    background: $bg
+    line-height: $size
+    border-radius: 50%
+    text-align: center
+
+// Mixing for color & background color % border color
+=color($color, $bg, $bdr-color: $color)
+    color: $color
+    background: $bg
+    border-color: $bdr-color
+
+// Mixing for clearfix
+=clearfix()
+    &:after
+        display: block
+        clear: both
+        content: ""
+    
+// Gap Left and Right
+=gapLeftRight($property, $value)
+    #{$property}-left: $value
+    #{$property}-right: $value
+      
+// Gap Top and Bottom
+=gapTopBottom($property, $value)
+    #{$property}-top: $value
+    #{$property}-bottom: $value
+    
+
+// RESPONSIVE MEDIA MIXINS 
+// Extra Large Device
+=xl-d() 
+    @media only screen and (min-width: 1501px) 
+        @content
+  
+// Project Device
+=project-d() 
+    @media only screen and (max-width: 1700px) and (min-width: 1200px) 
+        @content
+  
+  
+// Large Device
+=lg-d() 
+    @media only screen and (max-width: 1500px) 
+        @content
+  
+// Medium Device
+=md-d() 
+    @media only screen and (max-width: 1199px) 
+        @content
+ 
+// Within Medium and Tab Device 
+=mt-d() 
+    @media only screen and (max-width: 1199px) and (min-width: 991px) 
+        @content
+   
+// Tab Device
+=tb-d() 
+    @media only screen and (max-width: 991px) 
+        @content
+  
+// Within Tab and Mobile Device 
+=tm-d() 
+    @media only screen and (max-width: 991px) and (min-width: 768px) 
+        @content
+    
+// Mobile Device
+=mo-d() 
+    @media only screen and (max-width: 767px) 
+        @content
+
+// Within Mobile and Small Device 
+=ms-d() 
+    @media only screen and (max-width: 575px) 
+        @content
+        
+// Small Medium Device
+=sm-d() 
+    @media only screen and (max-width: 480px) 
+        @content
+
+// Small Medium Device
+=xs-d() 
+    @media only screen and (max-width: 375px) 
+        @content

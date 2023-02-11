@@ -1,0 +1,89 @@
+/*******************************************************/
+/****************** 09. About Section ******************/
+/*******************************************************/
+.about-content
+    margin-left: 65px
+    +md-d
+        margin-left: 0
+    > i
+        color: $heading-color
+.about-right-leaf
+    position: absolute
+    top: -20%
+    right: 0
+    max-width: 15%
+    animation: down-up-one 10s infinite
+    
+.about-left
+    .circle-image
+        position: absolute
+        left: 0
+        top: 0
+        z-index: -1
+        max-width: 50%
+        transform: translate(-45%, -40%)
+        img
+            border-radius: 50%
+            animation: rotated_circle 20s infinite
+            
+/* About Page */
+.about-page-right-video
+    position: relative
+    +overlay(black, 0.3)
+    &:before
+        z-index: 1
+    img
+        width: 100%
+    .video-play
+        +size(95px)
+        color: white
+        line-height: 93px
+        background: transparent
+        border: 1px solid white
+        +sm-d
+            +size(65px)
+            font-size: 18px
+            line-height: 63px
+.client-logo-wrap
+    .slick-track
+        +flexcenter(center)
+    img,
+        display: inline-block
+    .slick-slide
+        +gapLeftRight(margin, 15px)
+        
+/* About Two */
+.about-right-text
+    .read-more
+        color: $yellow-color
+        
+.about-offer-item
+    position: relative
+    margin-bottom: 30px
+    &:before
+        position: absolute
+        content: ''
+        +size(100%)
+        left: 0
+        top: 0
+        background-image: linear-gradient(167.82deg, rgba(0, 0, 0, 0) 6.02%, #000000 118.19%)
+    img
+        width: 100%
+    .about-offer-content
+        position: absolute
+        width: 100%
+        left: 0
+        z-index: 2
+        bottom: 35px
+        text-align: center
+        span
+            color: white
+            opacity: 0.7
+        h4
+            color: white
+            margin-bottom: 5px
+        .bg-text
+            font-size: 130px
+            opacity: 0.1
+            left: 50%
+            transform: translate(-50%, -50%)

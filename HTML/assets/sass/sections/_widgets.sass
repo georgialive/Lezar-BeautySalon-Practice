@@ -1,0 +1,253 @@
+/*******************************************************/
+/***************** 25. Sidebar Widgets *****************/
+/*******************************************************/
+.blog-sidebar
+    max-width: 500px
+.widget
+    padding: 35px 30px
+    margin-bottom: 30px
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    +xs-d
+        +gapLeftRight(padding, 25px)
+    &:last-child
+        margin-bottom: 0
+    ul
+        li
+            margin-bottom: 15px
+            a
+                +flexcenter(space-between)
+                &:hover
+                    color: $heading-color
+            &:last-child
+                margin-bottom: 0
+    
+/* Widget Title */
+.widget-title
+    font-size: 20px
+    font-weight: 600
+    position: relative
+    margin-bottom: 35px
+    padding-bottom: 20px
+    border-bottom: 1px solid $border-color
+    &:before
+        position: absolute
+        content: ''
+        height: 3px
+        width: 50px
+        left: 0
+        bottom: -2px
+        background: $yellow-color
+    
+/* About Widget */
+.about-widget
+    border: none
+    text-align: center
+    background: #F9F9F9
+    img
+        width: 100%
+        margin-bottom: 35px
+        border-radius: 0 0 0 33%
+    h5
+        font-weight: 600
+    
+/* Search Widget */
+.search-widget
+    padding: 0
+    form
+        display: flex
+        align-items: center
+        padding-right: 30px
+        input
+            border: none
+            +gapTopBottom(padding, 18px)
+            &::placeholder
+                font-weight: 400
+        button
+            color: $yellow-color
+            background: transparent
+        
+    
+/* Blog Widget */
+.widget-post-item
+    display: flex
+    align-items: center
+    margin-bottom: 25px
+    +xs-d
+        display: block
+        img
+            margin-bottom: 10px
+    &:last-child
+        margin-bottom: 0
+    img
+        max-width: 85px
+        margin-right: 25px
+    .posted-on
+        font-size: 13px
+        font-weight: 500
+        margin-bottom: 3px
+        display: inline-block
+        text-transform: uppercase
+    h6
+        font-size: 16px
+        margin-bottom: 0
+        text-transform: capitalize
+    .read-more
+        font-size: 13px
+    
+/* Gallery Widget */
+.gallery-widget
+    padding: 0
+    border: none
+.gallery-widget-wrap
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -20px -20px 0
+    .widget-gallery-item
+        +overlay(black, 0)
+        margin: 0 20px 20px 0
+        width: calc(33.33% - 20px)
+        img
+            width: 100%
+        &:before
+            z-index: 1
+            transition: 0.5s
+        a
+            position: absolute
+            left: 50%
+            top: 50%
+            opacity: 0
+            z-index: 5
+            color: white
+            font-size: 22px
+            transition: 0.5s
+            transform: translate(-50%, -50%)
+        &:hover
+            &:before
+                opacity: 0.4
+            a
+                opacity: 1
+    
+/* Tag Cloud Widget */
+.tag-cloud-widget
+    padding: 0
+    border: none
+.tag-clouds
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px -10px 0
+    a
+        font-size: 15px
+        padding: 2px 15px
+        margin: 0 10px 10px 0
+        border: 1px solid $heading-color
+        &:hover
+            color: white
+            background: $yellow-color
+            border-color: $yellow-color
+    
+/* Form Widget */
+.form-widget
+    form
+        .form-group
+            position: relative
+            margin-bottom: 10px
+            label
+                position: absolute
+                right: 15px
+                top: 12px
+        input,
+        select,
+        textarea,
+        .nice-select
+            border: none
+            padding: 13px 20px
+            background: $light-gray-color
+        .nice-select
+            float: none
+            height: auto
+            font-size: 16px
+            line-height: 1.8
+            border-radius: 0
+            .current
+                font-weight: 600
+                color: $heading-color
+            .list
+                width: 100%
+                border-radius: 0
+            li
+                margin-bottom: 0
+            &:after
+                +size(7px)
+                right: 20px
+            
+/* Filter Widget */
+.filter-price-widget
+    .widget-title
+        margin-bottom: 12px
+        &:before
+            height: 2px
+            bottom: 2px
+            width: 80%
+.price-filter-details
+    +flexcenter(space-between)
+    a
+        color: white
+        font-size: 12px
+        padding: 1px 12px
+        background: $yellow-color
+   
+/* Products Widget */
+.widget-product-item
+    display: flex
+    align-items: center
+    margin-bottom: 22px
+    &:last-child
+        margin-bottom: 0
+    .widget-product-image
+        flex: none
+        width: 50px
+        margin-right: 12px
+    h6
+        font-size: 16px
+        margin-bottom: 2px
+   
+/* Products Add */
+.product-add-widget
+    background: url(../images/widgets/product-add.jpg) no-repeat center/cover
+    +overlay(black, 0.55)
+    .product-add-content
+        max-width: 222px
+        h3
+            font-size: 35px
+            font-weight: 600
+            line-height: 1.25
+            margin-bottom: 20px
+            text-decoration: underline
+            text-decoration-thickness: 2px
+        .theme-btn
+            font-size: 14px
+            font-weight: 600
+            margin-top: 10px
+            padding: 10px 25px
+            
+/* Service Sidebar */
+.service-sidebar
+    .widget
+        border: none
+        padding: 45px 40px
+        box-shadow: 10px 4px 60px rgba(148, 148, 148, 0.15)
+        +xs-d
+            +gapLeftRight(padding, 25px)
+         
+/* Shop Sidebar */
+.shop-sidebar
+    .widget
+        padding: 0
+        border: none
+        padding-bottom: 10px
+    .search-widget
+        form
+            padding: 0 0 8px
+            border-bottom: 1px solid
+            input
+                padding: 0

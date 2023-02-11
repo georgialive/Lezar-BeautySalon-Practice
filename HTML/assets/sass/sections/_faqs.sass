@@ -1,0 +1,47 @@
+/*******************************************************/
+/******************* 24. FAQ Section *******************/
+/*******************************************************/
+.faq-accordion
+    .card
+        border: none
+        font-size: 16px
+        border-radius: 0
+        margin-top: 10px
+        background: $light-gray-color
+        .card-header
+            border: none
+            display: flex
+            border-radius: 0
+            font-weight: 600
+            align-items: start
+            padding: 12px 30px
+            color: $heading-color
+            text-decoration: underline
+            background-color: transparent
+            justify-content: space-between
+            i
+                float: right
+                margin-top: 8px
+                font-size: 14px
+                transition: 0.5s
+            &.collapsed
+                i
+                    transform: rotate(-90deg)
+        .card-body
+            padding: 0 30px
+            
+/* FAQ Page */
+.faq-page
+    .card
+        .collapse
+            transition: 0.5s
+        .card-header
+            color: white
+            background: $heading-color
+            + div
+                color: white
+                transition: 0.5s
+                background: $heading-color
+            &.collapsed
+                color: $heading-color
+                background-color: transparent

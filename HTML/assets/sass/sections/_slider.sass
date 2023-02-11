@@ -1,0 +1,148 @@
+/*******************************************************/
+/****************** 08. Slider Section ******************/
+/*******************************************************/
+.slider-section
+    background: black
+    .slick-arrow
+        +size(50px)
+        z-index: 2
+        opacity: 0
+        color: white
+        transition: 0.5s
+        line-height: 50px
+        text-align: center
+        position: absolute
+        top: calc(50% - 25px)
+        background: transparent
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        &:focus,
+        &:hover
+            background: white
+            border-color: white
+            color: $heading-color
+        &.slider-prev
+            left: 70px
+            +tb-d
+                left: 15px
+        &.slider-next
+            right: 70px
+            +tb-d
+                right: 15px
+    .slick-dots
+        position: absolute
+        left: 50%
+        bottom: 50px;
+        display: flex
+        transform: translate(-50%)
+        li
+            +size(10px)
+            cursor: pointer
+            overflow: hidden
+            transition: 0.5s
+            border-radius: 50%
+            text-indent: 100px
+            background: transparent
+            border: 2px solid white
+            +gapLeftRight(margin, 5px)
+            button
+                background: transparent
+            &.slick-active
+                background: white
+    &:hover
+        .slick-arrow
+            opacity: 1
+.slider-single-item
+    z-index: 1
+    min-height: 100vh
+    text-align: center
+    align-items: center
+    position: relative
+    background-size: cover
+    +gapTopBottom(padding, 150px)
+    +overlay(black, 0.4)
+    +mo-d
+        min-height: auto
+        +gapTopBottom(padding, 120px)
+    &:after
+        position: absolute
+        border-radius: 50%
+        +size(570px)
+        content: ''
+        left: 50%
+        top: 50%
+        z-index: -2
+        filter: blur(300px)
+        transform: translate(-50%, -50%)
+        background: rgba(39, 39, 39, 0.6)
+    *
+        animation-duration: 1s
+        animation-fill-mode: both
+    .container
+        max-width: 900px
+    .bg-text
+        font-size: 350px
+        color: white
+        opacity: 0.1
+        left: 50%
+        top: 50%
+        transition: 1s
+        transform: translate(-50%, -50%) scale(0)
+        +lg-d
+            font-size: 250px
+        +md-d
+            font-size: 200px
+        +tb-d
+            font-size: 150px
+        +tm-d
+            font-size: 120px
+        +mo-d
+            font-size: 100px
+        +ms-d
+            font-size: 80px
+        +sm-d
+            font-size: 50px
+    .sub-title
+        color: white
+        display: block
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 15px
+    h1
+        color: white
+        font-size: 120px
+        line-height: 1.08
+        margin-bottom: 25px
+        +lg-d
+            font-size: 100px
+        +md-d
+            font-size: 75px
+        +mo-d
+            font-size: 60px
+        +ms-d
+            font-size: 45px
+        +sm-d
+            font-size: 35px
+    .slider-btn
+        +gapLeftRight(margin, -10px)
+        .theme-btn
+            margin: 10px 10px 0
+    &.slick-slide
+        display: flex
+    &.slick-active
+        .bg-text
+            transition-delay: 1s
+            transform: translate(-50%, -50%) scale(1)
+        h1,
+        .sub-title,
+        .slider-btn .theme-btn
+            animation-name: fadeInUp
+        .sub-title
+            animation-delay: 0.5s
+        h1
+            animation-delay: 0.7s
+        .slider-btn .theme-btn
+            &:first-child
+                animation-delay: 0.9s
+            &:last-child
+                animation-delay: 1.1s
+        

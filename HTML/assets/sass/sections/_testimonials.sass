@@ -1,0 +1,330 @@
+/*******************************************************/
+/*************** 13. Testimonials Section **************/
+/*******************************************************/
+.feedback-wrap
+    +container(680px)
+    +gapLeftRight(padding, 25px)
+.feedback-left-image
+    min-height: 450px
+.feedback-content-item
+    @extend %heading
+    font-size: 42px
+    line-height: 1.33
+    +lg-d
+        font-size: 33px
+    +ms-d
+        font-size: 28px
+    +xs-d
+        font-size: 22px
+        line-height: 1.5
+    .font-weight-normal
+        color: $base-color
+.feedback-logos
+    img
+        margin: 10px 10px 0
+.feedback-leaf
+    position: absolute
+    right: 4%
+    bottom: 0
+    max-width: 20%
+    
+/* Feedback Carousel */
+.about-page-feedback
+    .feedback-wrap
+        padding-right: 55px
+        +md-d
+            padding-right: 25px
+    .bg-text
+        font-size: 150px
+    
+.feedback-item-wrap
+    .feedback-content-item
+        font-size: 30px
+        line-height: 1.6
+        +ms-d
+            font-size: 25px
+        +xs-d
+            font-size: 20px
+    
+.feedback-logo-wrap
+    +container(300px)
+    img
+        width: 70px
+        cursor: pointer
+        display: inline-block
+        +gapLeftRight(margin, 15px)
+    .slick-dots
+        margin-top: 35px
+        +flexcenter(center)
+        li
+            +size(10px)
+            margin: 5px
+            opacity: 0.15
+            transition: 0.5s
+            overflow: hidden
+            border: 2px solid
+            border-radius: 50%
+            &.slick-active
+                opacity: 1
+            button
+                background: transparent
+        
+/* Feedback Style Two */
+.section-title-with-btn
+    +flexcenter(space-between)
+    flex-wrap: wrap
+.feedback-arrows
+    button
+        +size(55px)
+        transition: 0.5s
+        background: white
+        line-height: 53px
+        text-align: center
+        color: $secondary-color
+        border: 1px solid transparentize($secondary-color, 0.8)
+        &:hover
+            color: white
+            background: $secondary-color
+        &:first-child
+            margin-right: 10px
+        
+.feedback-active,
+.feedback-active-two-row
+    +gapLeftRight(margin, -15px)
+    .feedback-item
+        margin: 15px
+.feedback-item
+    z-index: 1
+    padding: 45px
+    background: white
+    position: relative
+    margin-bottom: 30px
+    box-shadow: 0px 0px 20px rgba(121, 154, 161, 0.2)
+    +xs-d
+        +gapLeftRight(padding, 25px)
+    .for-border
+        +size(100%)
+        position: absolute
+        left: 0
+        top: 0
+        z-index: -1
+    &:before,
+    &:after,
+    .for-border:after,
+    .for-border:before
+        content: ''
+        transition: 0.2s
+        position: absolute
+        background: $secondary-color
+    &:before,
+    .for-border:before
+        width: 1px
+        height: 0
+    &:after,
+    .for-border:after
+        height: 1px
+        width: 0
+    &:before
+        left: 0
+        bottom: 0
+    &:after
+        top: 0
+        left: 0
+        transition-delay: 0.6s
+    .for-border
+        &:before
+            top: 0
+            right: 0
+            transition-delay: 0.4s
+        &:after
+            right: 0
+            bottom: 0
+            transition-delay: 0.2s
+    &:hover
+        &:before
+            height: 100%
+            transition-delay: 0.6s
+        &:after
+            width: 100%
+            transition-delay: 0s
+        .for-border
+            &:before
+                height: 100%
+                transition-delay: 0.2s
+            &:after
+                width: 100%
+                transition-delay: 0.4s
+        
+    .quote-rating
+        margin-bottom: 33px
+        +flexcenter(space-between)
+        > i
+            font-size: 55px
+            color: $secondary-color
+        .rating
+            font-size: 20px
+            +flexcenter(center)
+            i
+                color: #FF8A3D
+                margin-right: 10px
+            span
+                font-weight: 600
+                color: $secondary-color
+                font-family: $heading-font
+.author-description
+    margin-top: 30px
+    +flexcenter(start)
+    +xs-d
+        display: block
+    img
+        +size(60px)
+        margin-right: 25px
+        border-radius: 50%
+        +xs-d
+            margin-right: 0
+            margin-bottom: 15px
+    h5
+        font-size: 20px
+        margin-bottom: 0
+
+.feedback-progress
+    width: 100%
+    height: 3px
+    margin-top: 50px
+    +container(630px)
+    position: relative
+    background: transparentize($primary-color, 0.5)
+    +mo-d
+        max-width: 95%
+    .progress
+        left: 0
+        width: 0
+        top: -2px
+        height: 7px
+        transition: 0.5s
+        border-radius: 0
+        overflow: inherit
+        position: absolute
+        background: $secondary-color
+        &:after
+            content: ''
+            right: 0
+            top: 50%
+            position: absolute
+            transform: translate(50%, -50%)
+            +circle($secondary-color, 25px)
+        
+/* Feedback Two Row */
+.feedback-section-row-two
+    .feedback-arrows
+        button
+            &:not(:hover)
+                color: $yellow-color
+            &:hover
+                background: $yellow-color
+.feedback-active-two-row
+    .feedback-item
+        &:before,
+        &:after,
+        .for-border:after,
+        .for-border:before
+            background: $yellow-color
+    .slick-track
+        +gapLeftRight(margin, -15px)
+        .slick-slide
+            +gapLeftRight(padding, 15px)
+    .quote-rating
+        > i,
+        .rating span
+            color: $yellow-color
+            
+/* Testimonial Three */
+.feedback-wrap.style-three
+    .icon
+        line-height: 1
+        font-size: 135px
+        text-align: center
+        margin-bottom: 20px
+        color: $yellow-color
+        +ms-d
+            font-size: 100px
+        +xs-d
+            font-size: 75px
+    .bg-text
+        left: 50%
+        transform: translate(-50%, -25%)
+.feedback-item-three
+    +gapLeftRight(padding, 30px)
+    +sm-d
+        +gapLeftRight(padding, 0)
+    .feedback-text
+        display: block
+        font-size: 35px
+        line-height: 1.56
+        text-align: center
+        color: $heading-color
+        +mo-d
+            font-size: 25px
+        +xs-d
+            font-size: 20px
+    .author-description
+        width: max-content
+        +gapLeftRight(margin, auto)
+        +xs-d
+            text-align: center
+            img
+                display: inline-block
+.feedback-three-arrows
+    display: flex
+    margin-right: -30px
+    justify-content: end
+    +md-d
+        margin-right: 0
+        justify-content: center
+    button
+        +size(60px)
+        font-size: 20px
+        transition: 0.5s
+        background: white
+        color: $heading-color
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25)
+        &:hover, &:focus
+            color: white
+            background: $yellow-color
+            
+/* Testimonial Tab */
+.testimonial-tab
+    .nav
+        text-align: center
+        border-top: 1px solid $border-color
+        border-bottom: 1px solid $border-color
+        .nav-link
+            opacity: 0.4
+            flex: 1 1 auto
+            border-radius: 0
+            padding: 40px 10px
+            border-bottom: 1px solid transparent
+            +mo-d
+                +gapTopBottom(padding, 20px)
+                img
+                    max-width: 80px
+            &.active
+                opacity: 1
+                background: transparent
+                border-color: $yellow-color
+    .tab-pane
+        margin-top: 45px
+        +container(1100px)
+    .feedback-content-item
+        text-align: center
+    .author-description
+        justify-content: center
+        +xs-d
+            text-align: center
+.testimonial-circle
+    position: absolute
+    right: 5%
+    bottom: 10%
+    z-index: -1
+    max-width: 20%
+    animation: rotated_circle 20s infinite

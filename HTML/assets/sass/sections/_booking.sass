@@ -1,0 +1,156 @@
+/*******************************************************/
+/***************** 15. Booking Section *****************/
+/*******************************************************/
+.booking-section
+    +gapLeftRight(padding, 55px)
+    +lg-d
+        +gapLeftRight(padding, 0)
+.booking-item
+    display: flex
+    background: #F9F9F9
+    margin-bottom: 30px
+    height: calc(100% - 30px)
+    +mo-d
+        display: block
+    .booking-image
+        width: 100%
+        min-height: 400px
+        background-size: cover
+    .booking-content
+        padding: 75px 55px
+        align-self: center
+        position: relative
+        width: 50%
+        flex: none
+        z-index: 1
+        min-width: 430px
+        +mo-d
+            width: 100%
+            min-width: auto
+        +ms-d
+            +gapLeftRight(padding, 15px)
+        .bg-text
+            top: 50px
+            left: 60px
+            font-size: 85px
+            +ms-d
+                font-size: 55px
+        > h3
+            margin-bottom: 18px
+        
+        ul li
+            display: flex
+            margin-top: 25px
+            > i
+                color: #FFAF7B
+                margin: 10px 20px 0 0
+            h5
+                margin-bottom: 0
+                font-weight: 600
+            p
+                margin-bottom: 0
+            .theme-btn
+                font-size: 15px
+                margin-top: 30px
+                padding: 10px 25px
+                
+/* Booking Page */
+.booking-from
+    .nice-select,
+    .form-control
+        border-color: white
+        background: $light-gray-color
+        &:focus
+            background: white
+            border-color: $border-color
+    .nice-select:after
+        right: 35px
+                
+.booking-hour-image
+    position: absolute
+    height: 100%
+    width: 50vw
+    left: 0
+    top: 0
+    +tb-d
+        position: relative
+        height: 400px
+        width: 100%
+        margin-bottom: 75px
+        
+.booking-hours-content
+    max-width: 475px
+    margin-left: auto
+    padding-left: 30px
+    +tb-d
+        margin-left: 0
+        padding-left: 0
+        max-width: none
+.booking-hours
+    li
+        font-weight: 600
+        margin-bottom: 25px
+        padding-bottom: 15px
+        +flexcenter(space-between)
+        border-bottom: 1px solid $border-color
+        +xs-d
+            font-size: 16px
+        .date
+            width: 33%
+.booking-circle
+    top: 10%
+    right: 5%
+    z-index: -1
+    max-width: 10%
+    position: absolute
+    animation: rotated_circle 20s infinite
+.booking-bg-icon
+    position: absolute
+    right: 30px
+    bottom: 20px
+    color: black
+    z-index: -1
+    opacity: 0.03
+    line-height: 1
+    font-size: 25vw
+        
+/* Booking Section Two */
+.video-inner
+    +overlay(black, 0.3)
+    &:before
+        z-index: 2
+.booking-section-bg
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: -2
+    +size(100%, 200%)
+    +tb-d
+        height: 130%
+    +sm-d
+        height: 110%
+.booking-two-item
+    max-width: 300px
+    margin-bottom: 50px
+    .bg-text
+        font-size: 85px
+        transform: translate(0, -50%)
+    ul li
+        display: flex
+        margin-top: 25px
+        > i
+            margin: 5px 20px 0 0
+        h5
+            font-weight: 600
+            margin-bottom: 5px
+            &:nth-child(2)
+                margin-top: 15px
+               
+/* Booking Section Three */
+.booking-section-three
+    .nice-select,
+    .form-control
+        background: white
+    .booking-circle
+        bottom: 25%
+        top: auto

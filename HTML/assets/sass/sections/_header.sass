@@ -1,0 +1,524 @@
+/*******************************************************/
+/******************* 06. Header style ******************/
+/*******************************************************/
+.main-header
+    position: relative
+    left: 0px
+    top: 0px
+    z-index: 999
+    width: 100%
+    transition: all 500ms ease
+    .header-upper
+        z-index: 5
+        width: 100%
+        background: white
+        position: relative
+        +gapLeftRight(padding, 55px)
+        transition: all 500ms ease
+        +lg-d
+            +gapLeftRight(padding, 0)
+    .logo-outer
+        flex: none
+        +tb-d
+            display: none
+    .logo
+        z-index: 9
+        padding: 2px 0
+        position: relative
+    &.fixed-header
+        .header-upper
+            top: 0
+            left: 0
+            position: fixed
+            animation: sticky  1s
+            box-shadow: 0px 0px 30px 0px rgba(87, 95, 245, .10)
+
+.header-top-wrap
+    +tb-d
+        display: none
+.header-top
+    font-size: 15px
+    +flexcenter(center)
+    font-family: $heading-font
+    ul
+        display: flex
+        li
+            display: flex
+            align-items: center
+            position: relative
+            span
+                margin-right: 5px
+                text-transform: uppercase
+            i
+                margin-right: 13px
+            &:after
+                content: ''
+                +circle(transparent, 22px)
+                +gapLeftRight(margin, 33px)
+                border: 1px solid transparentize(white, 0.7)
+            &:before
+                content: ''
+                +circle(white, 7px)
+                position: absolute
+                opacity: 0.3
+                right: 40px
+                top: 11px
+            &:last-child
+                &:after,
+                &:before
+                    display: none
+    
+.nav-outer
+    width: 100%
+    +flexcenter(center)
+    .menu-btn
+        margin-left: 75px
+        +tb-d
+            display: none
+ 
+/** Header Main Menu **/
+.main-menu
+    +tb-d
+        width: 100%
+    .mobile-logo
+        +sm-d
+            max-width: 150px
+    .collapse
+        +tb-d
+            overflow: auto
+    .navbar-collapse
+        padding: 0px
+        > ul
+            display: flex
+            +tb-d
+                display: block
+                padding: 25px 0
+                background: #FFFFFF
+                > li:last-child
+                    border-bottom: 1px solid #f3f3f3
+        +tb-d
+            left: 0
+            width: 100%
+            padding: 0 15px
+            position: absolute
+        li
+            +flexcenter(space-between)
+            padding: 33px 20px
+            +lg-d
+                padding: 30px 15px
+            +md-d
+                padding: 30px 10px
+            +tb-d
+                display: block
+                padding: 0 20px
+                border-top: 1px solid #f3f3f3
+            &.dropdown .dropdown-btn
+                cursor: pointer
+                font-size: 13px
+                margin-left: 5px
+                +tb-d
+                    position: absolute
+                    right: 10px
+                    top: 0
+                    width: 50px
+                    height: 43px
+                    border-left: 1px solid #f2f2f2
+                    text-align: center
+                    line-height: 43px
+            a
+                position: relative
+                display: block
+                font-size: 18px
+                opacity: 1
+                font-weight: 500
+                color: $heading-color
+                text-transform: uppercase
+                font-family: $heading-font
+                transition: all 500ms ease
+                +tb-d
+                    padding: 10px 10px
+                    line-height: 22px
+            &.current > a, &.current-menu-item > a
+                font-weight: 500
+            li
+                border-top: 1px solid #f3f3f3
+                a
+                    text-transform: capitalize
+            .megamenu
+                position: absolute
+                left: 0px
+                top: 100%
+                width: 100%
+                z-index: 100
+                display: none
+                padding: 20px 0
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +clearfix
+                +tb-d
+                    position: relative
+                    box-shadow: none
+                    width: 100%
+                    .container
+                        max-width: 100%
+                    .row
+                        margin: 0px
+                ul
+                    display: block
+                    position: relative
+                    top: 0
+                    width: 100%
+                    box-shadow: none
+            ul
+                position: absolute
+                left: inherit
+                top: 100%
+                min-width: 250px
+                z-index: 100
+                display: none
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +tb-d
+                    position: relative
+                    display: none
+                    width: 100%
+                    box-shadow: none
+                    +clearfix
+                    +xs-d
+                        min-width: auto
+                li
+                    width: 100%
+                    padding: 7px 20px
+                    +tb-d
+                        padding: 0 15px
+                    ul
+                        left: 100%
+                        top: 0%
+                        +tb-d
+                            left: auto
+
+    .navbar-header
+        display: none
+        +tb-d
+            +flexcenter(start)
+        .navbar-toggle
+            float: right
+            padding: 4px 0
+            cursor: pointer
+            background: transparent
+            .icon-bar
+                background: $base-color
+                height: 2px
+                width: 30px
+                display: block
+                margin: 7px 0
+
+/* Menu Icons */
+.menu-icons
+    display: flex
+    align-items: center
+    button
+        background: transparent
+    .cart
+        +sm-d
+            display: none
+        
+/* Header Search */
+.nav-search
+    position: relative
+    +gapLeftRight(margin, 50px)
+    +md-d
+        +gapLeftRight(margin, 25px)
+    +sm-d
+        display: none
+    button
+        background: transparent
+    form
+        position: absolute
+        width: 320px
+        top: 100%
+        right: 0
+        z-index: 777
+        padding: 10px
+        +flexcenter(center)
+        background-color: #fff
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05)
+        &.hide
+            display: none
+        input
+            border: none
+            padding: 15px 5px 15px 25px
+        button
+            padding: 15px 20px 15px 0
+    
+/* Menu Sidebar */
+.menu-sidebar
+    display: flex
+    button
+        width: 38px
+        cursor: pointer
+        flex-wrap: wrap
+        border-radius: 50%
+        +flexcenter(center)
+        background: transparent
+        .icon-bar
+            height: 2px
+            width: 32px
+            margin: 4px auto
+            transition: 0.5s
+            border-radius: 2px
+            background: $heading-color
+            &:nth-child(2)
+                width: 100%
+  
+/** hidden-sidebar *
+.hidden-bar
+    position: fixed
+    right: -350px
+    top: 0px
+    opacity: 0
+    width: 350px
+    height: 100%
+    z-index: 99999
+    overflow-y: auto
+    visibility: hidden
+    background-color: $heading-color
+    border-left: 1px solid #231b26
+    transition: all 0.5s ease
+    +xs-d
+        width: 300px
+    .social-style-one
+        a
+            +size(40px)
+            line-height: 40px
+
+.side-content-visible .hidden-bar
+    right: 0px
+    opacity: 1
+    visibility: visible
+
+.hidden-bar .inner-box
+    position: relative
+    padding: 100px 40px 50px
+    +xs-d
+        +gapLeftRight(padding, 25px)
+    .cross-icon
+        position: absolute
+        right: 30px
+        top: 30px
+        cursor: pointer
+        color: #ffffff
+        font-size: 20px
+        transition: all 500ms ease
+    h4
+        position: relative
+        color: #ffffff
+        margin-bottom: 35px
+
+/*Appointment Form
+.hidden-bar .appointment-form
+    position: relative
+
+    .form-group
+        position: relative
+        margin-bottom: 20px
+
+    input
+        &[type="text"], &[type="email"]
+            position: relative
+            display: block
+            width: 100%
+            line-height: 23px
+            padding: 10px 25px
+            color: #ffffff
+            font-size: 16px
+            background: none
+            transition: all 300ms ease
+            border: 1px solid rgba(255, 255, 255, 0.1)
+
+    textarea
+        position: relative
+        display: block
+        width: 100%
+        line-height: 23px
+        padding: 10px 25px
+        color: #ffffff
+        font-size: 16px
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        background: none
+        transition: all 300ms ease
+        resize: none
+
+    input::placeholder
+        font-size: 14px
+        color: #bdbdbd
+
+    textarea
+        &::placeholder
+            font-size: 14px
+            color: #bdbdbd
+
+    .form-group button
+        width: 100%
+        font-size: 16px
+        padding: 10px 15px
+        margin-bottom: 20px
+        border-color: white
+
+.form-back-drop
+    position: fixed
+    right: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    opacity: 0
+    background: rgba(0, 0, 0, 0.7)
+    visibility: hidden
+    z-index: 9990
+    transition: all 0.5s ease
+
+.side-content-visible .form-back-drop
+    opacity: 1
+    visibility: visible
+    
+/* Header Two */
+.header-two
+    position: fixed
+    .header-upper
+        background: transparent
+    .menu-sidebar,
+    .navbar-header .navbar-toggle
+        .icon-bar
+            background: white
+    .navbar-collapse .navigation
+        > li > a
+            color: white
+        +tb-d
+            background: $heading-color
+            > li,
+            > li:last-child,
+            > li.dropdown > .dropdown-btn
+                border-color: #f3f3f324
+    &.fixed-header
+        .header-upper
+            background: $secondary-color
+            
+/*Header Three*/
+.header-three
+    .menu-sidebar .icon-bar,
+    .main-menu .navbar-toggle .icon-bar
+        background: $yellow-color
+    .header-top ul li i
+        color: $yellow-color
+            
+/* Header Four */
+.header-four
+    .header-upper
+        background: transparent
+    .logo-outer
+        display: block
+    &.fixed-header
+        .header-upper
+            background: white
+            
+/* Header Five */
+.header-five
+    position: fixed
+    right: 0
+    left: auto
+    width: calc(100% - 85px)
+    +ms-d
+        width: 100%
+    .header-upper
+        background: transparent
+    .menu-sidebar,
+    .navbar-header .navbar-toggle
+        .icon-bar
+            background: white
+    .nav-outer
+        margin-right: 30px
+        justify-content: end
+    .nav-search
+        margin-right: 0
+        form button
+            color: $heading-color
+    .navbar-collapse .navigation
+        > li > a
+            color: white
+        +tb-d
+            background: $heading-color
+            > li,
+            > li:last-child,
+            > li.dropdown > .dropdown-btn
+                border-color: #f3f3f324
+    &.fixed-header
+        .header-upper
+            position: relative
+            background: $yellow-color
+            
+.home-three
+    .page-wrapper
+        margin-right: 0
+        width: calc(100% - 85px)
+        +ms-d
+            width: 100%
+    .menu-sidebar
+        top: 40px
+        left: 24px
+        z-index: 99999
+        position: fixed
+        .icon-bar
+            background: white
+    .hidden-bar
+        opacity: 1
+        left: -265px
+        z-index: 9999
+        background: black
+        visibility: visible
+        +ms-d
+            display: none
+        .inner-box
+            height: 100%
+            display: flex
+            align-items: end
+            justify-content: end
+            +gapLeftRight(padding, 0)
+        .sidebar-form
+            margin-left: 30px
+            margin-right: 5px
+            
+        .follow-us-wrap
+            display: flex
+            flex-direction: column
+            +gapLeftRight(margin, 25px)
+            b
+                color: white
+                +flexcenter(center)
+                transform: rotate(180deg)
+                -webkit-writing-mode: vertical-lr
+                &:after
+                    content: ''
+                    height: 30px
+                    width: 2px
+                    opacity: 0.5
+                    margin-top: 20px
+                    background: white
+        .follow-btns
+            display: flex
+            -webkit-writing-mode: vertical-rl
+            a
+                margin-bottom: 40px
+                +tb-d
+                    margin-bottom: 15px
+                &:hover
+                    color: white
+    &.side-content-visible
+        .hidden-bar
+            left: 0
+            .icon-bar
+                &:nth-child(1)
+                    transform: rotate(45deg) translate(9px)
+                &:nth-child(2)
+                    opacity: 0
+                &:nth-child(3)
+                    transform: rotate(-45deg) translate(13px, -5px)

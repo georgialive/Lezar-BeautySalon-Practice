@@ -1,0 +1,190 @@
+/*******************************************************/
+/******************* 30. Main Footer *******************/
+/*******************************************************/
+.footer-one
+    z-index: 1
+    font-size: 16px
+    position: relative
+    a:not(:hover)
+        opacity: 0.6
+    p
+        opacity: 0.6
+    .footer-logo
+        margin-top: -5px
+        a
+            opacity: 1
+    .footer-title,
+    .footer-menu li a
+        text-transform: uppercase
+    .menu-widget
+        max-width: max-content
+        +gapLeftRight(margin, auto)
+        +ms-d
+            margin-left: 0
+        
+.footer-title
+    margin-bottom: 35px
+            
+.footer-widget
+    margin-bottom: 50px
+    .social-style-one
+        a
+            i
+                transition: 0.5s
+            &:hover i
+                color: $heading-color
+
+.menu-widget
+    ul
+        li
+            margin-bottom: 10px
+            &:last-child
+                margin-bottom: 0
+            a
+                display: flex
+                &:before
+                    content: ''
+                    +circle(white, 5px)
+                    margin: 14px 10px 0 0
+                &:not(:hover):before
+                    opacity: 0.6
+                
+.newsletter-widget
+    h2
+        +tm-d
+            font-size: 40px
+        +mo-d
+            font-size: 35px
+        +ms-d
+            font-size: 30px
+    input
+        +gapTopBottom(margin, 20px)
+        background-color: transparent
+        border-color: rgba(255, 255, 255, 0.2)
+        &::placeholder
+            color: white
+    .theme-btn
+        border-color: white
+        &:not(:hover)
+            color: $heading-color
+            i
+                color: $heading-color
+    
+.copyright-area
+    flex-wrap: wrap
+    margin-top: 25px
+    +flexcenter(space-between)
+    border-top: 1px solid rgba(255, 255, 255, 0.1)
+    .footer-menu
+        display: flex
+        flex-wrap: wrap
+        max-width: 500px
+        margin-bottom: 10px
+        li
+            margin: 0 35px 5px 0
+            +md-d
+                margin-right: 25px
+    .copyright-social
+        p
+            margin-bottom: 8px
+            
+.footer-leaf
+    z-index: -1
+    position: absolute
+    +lg-d
+        max-width: 5%
+    &.left-image
+        top: 0
+        left: 3%
+    &.right-image
+        bottom: 0
+        right: 3%
+
+.footer-subscribe
+    display: flex
+    flex-wrap: wrap
+    align-items: start
+    justify-content: space-between
+    .subscribe-title
+        display: flex
+        max-width: 400px
+        align-items: center
+        +xs-d
+            flex-wrap: wrap
+        i
+            font-size: 75px
+            line-height: 1.4
+            margin-right: 35px
+            color: $secondary-color
+        h3
+            font-size: 35px
+            margin-bottom: 0
+            padding-bottom: 20px
+            +sm-d
+                font-size: 25px
+    form
+        width: 100%
+        display: flex
+        margin-top: 20px
+        max-width: 700px
+        +sm-d
+            flex-wrap: wrap
+        input
+            margin-right: 30px
+            +gapTopBottom(padding, 16px)
+        button
+            flex: none
+            
+.contact-widget
+    ul li
+        display: flex
+        margin-bottom: 15px
+        i
+            flex: none
+            margin: 5px 15px 0 0
+            color: $yellow-color
+        h5
+            font-size: 20px
+            margin-bottom: 5px
+        
+/* Footer Two */
+.footer-two
+    font-size: 16px
+    .copyright-area
+        border-color: $border-color
+    .footer-menu
+        +xs-d
+            font-size: 16px
+        
+/* Footer Three */
+.footer-three
+    font-size: 16px
+    .footer-title
+        font-size: 24px
+    a
+        &:not(:hover)
+            opacity: 0.6
+        &:hover
+            color: $yellow-color
+            text-decoration: underline
+    p
+        opacity: 0.6
+    .menu-widget ul li a:before
+        background: $yellow-color
+    .social-style-one a:hover
+        background: $yellow-color
+        i
+            color: white
+    .newsletter-widget form
+        position: relative
+        input
+            margin: 0
+            padding: 15px 25px
+            &::placeholder
+                font-weight: 400
+                
+        button
+            top: 10px
+            right: 10px
+            position: absolute
+            +box($yellow-color, 45px)

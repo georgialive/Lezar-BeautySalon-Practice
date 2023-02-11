@@ -1,0 +1,122 @@
+/*******************************************************/
+/***************** 16. Category Section ****************/
+/*******************************************************/
+.category-section
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +gapLeftRight(padding, 70px)
+    +gapLeftRight(margin, -15px)
+    +lg-d
+        +gapLeftRight(padding, 15px)
+    .category-item
+        +gapLeftRight(margin, 15px)
+        width: calc(20% - 30px)
+        +lg-d
+            width: calc(33.33% - 30px)
+        +tb-d
+            width: calc(50% - 30px)
+        +ms-d
+            width: calc(100% - 30px)
+.category-item
+    z-index: 1
+    position: relative
+    padding: 50px 15px
+    text-align: center
+    margin-bottom: 30px
+    .for-border
+        +size(100%)
+        position: absolute
+        left: 0
+        top: 0
+        z-index: -1
+    &:before,
+    &:after,
+    .for-border:after,
+    .for-border:before
+        content: ''
+        transition: 0.2s
+        position: absolute
+        background: $heading-color
+    &:before,
+    .for-border:before
+        width: 1px
+        height: 0
+    &:after,
+    .for-border:after
+        height: 1px
+        width: 0
+    &:before
+        left: 0
+        bottom: 0
+    &:after
+        top: 0
+        left: 0
+        transition-delay: 0.6s
+    .for-border
+        &:before
+            top: 0
+            right: 0
+            transition-delay: 0.4s
+        &:after
+            right: 0
+            bottom: 0
+            transition-delay: 0.2s
+    &:hover
+        &:before
+            height: 100%
+            transition-delay: 0.6s
+        &:after
+            width: 100%
+            transition-delay: 0s
+        .for-border
+            &:before
+                height: 100%
+                transition-delay: 0.2s
+            &:after
+                width: 100%
+                transition-delay: 0.4s
+
+    .category-title
+        z-index: 1
+        position: relative
+        .bg-text
+            left: 50%
+            font-size: 75px
+            transform: translate(-50%, -40%)
+    > i
+        line-height: 1
+        font-size: 111px
+        margin-bottom: 22px
+        color: $heading-color
+        display: inline-block
+            
+/* About Page */
+.about-page
+    +overlay($light-gray-color, 1)
+    &:before
+        top: auto
+        bottom: 0
+        height: 130%
+.category-item.style-two
+    background: white
+    box-shadow: 10px 4px 60px rgba(0, 0, 0, 0.1)
+    &:after,
+    &:before
+        display: none
+    > i
+        color: $yellow-color
+    h4 a:hover
+        color: $yellow-color
+        text-decoration: underline
+        text-decoration-thickness: 1px
+        
+/* Pricing Page */
+.pricing-page-services
+    &:before
+        opacity: 0.8
+        background: black
+    .category-item
+        +gapTopBottom(padding, 40px)
+        > i
+            font-size: 80px

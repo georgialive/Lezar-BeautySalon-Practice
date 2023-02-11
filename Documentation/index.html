@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Lezar - HTML Template</title>
+
+    <!-- Style CSS -->
+    <link href="css/collection.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet"
+        type="text/css">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-boxed sidebar-dark">
+        <ul class="nav sidenav dropable">
+            <li><a href="#getting_started" title="Getting Started">Getting Started</a></li>
+            <li><a href="#head_css_structure" title="HEAD CSS Structure">CSS Structure</a></li>
+            <li><a href="#javascript_structure" title="Javascript Structure">Javascript Structure</a></li>
+            <li><a href="#html_structure" title="HTML Structure">HTML Structure</a></li>
+            <li><a href="#fonts_used" title="Fonts used">Fonts Used</a></li>
+            <li><a href="#color-change-option" title="Main Color Change Option">Main Color Change</a></li>
+            <li><a href="#email-change-option" title="Contact Email Change Option">Contact Email Change</a></li>
+            <li><a href="#run-scss" title="How to Run SCSS">How to Run SASS File</a></li>
+            <li><a href="#slider-edit" title="Owl Carousel Edit Option">Slick Edit Option</a></li>
+            <li><a href="#scroll-animation" title="How to Hide Scroll Animation">Scroll Animation</a></li>
+            <li><a href="#preloader-hide" title="How to edit/off Preloader">Preloader</a></li>
+            <li><a href="#speed-optimization" title="Speed Optimization">Speed Optimization</a></li>
+        </ul>
+    </aside>
+    <!-- END Sidebar -->
+
+    <header class="site-header navbar-transparent">
+        <!-- Banner -->
+        <div class="banner auto-size" style="background-color: #bc9a58">
+            <div class="container-fluid">
+                <h1 style="margin: 0; padding: 30px 0;"><strong>Lezar</strong> Documentation</h1>
+            </div>
+        </div>
+        <!-- END Banner -->
+    </header>
+
+    <main class="container-fluid">
+        <!-- Main content -->
+        <article class="main-content" role="main">
+
+
+            <section id="getting_started">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Getting Started</h3>
+                </div>
+                <p>The template folder <strong>Lezar</strong> is available inside the downloaded zip file. Need to
+                    unzip the zip file to find the template also the documentation folder.</p>
+                <p>The <strong>files and folders structure</strong> is similar to the following:</p>
+                <ol>
+                    <li><strong>assets/css</strong> — folder with CSS files.</li>
+                    <li><strong>assets/fonts</strong> — folder with fonts files.</li>
+                    <li><strong>assets/images</strong> — folder with image files.</li>
+                    <li><strong>assets/js</strong> — folder with Javascript files.</li>
+                    <li><strong>assets/sass</strong> — folder with SASS files.</li>
+                </ol>
+                <p>Upload the template files to the server with the help of one of the FTP-clients like FileZilla.</p>
+
+
+
+
+
+                <h6 style="margin-top: 20px;"><strong>Files Edit & Upload:</strong></h6>
+                <p>Individual pages can be customized by opening in a code editor such as VS Code. Once all the
+                    customization completed then to make the website live you need to upload the updated project files
+                    to the hosting server for your own domain. The files can be uploaded using FTP client such as
+                    FileZilla.</p>
+            </section>
+
+            <section id="head_css_structure">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">HEAD CSS Structure</h3>
+                </div>
+                <p>Followings are the <strong>css</strong> files which loaded inside the <strong>Head Section</strong>:
+                </p>
+                <pre class="line-numbers">
+<code class="language-markup">
+&lt;!--====== Flaticon ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/flaticon.min.css"&gt;
+&lt;!--====== Font Awesome ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/font-awesome-5.9.0.min.css"&gt;
+&lt;!--====== Bootstrap ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/bootstrap-4.5.3.min.css"&gt;
+&lt;!--====== Magnific Popup ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/magnific-popup.min.css"&gt;
+&lt;!--====== Nice Select ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/nice-select.min.css"&gt;
+&lt;!--====== Animate ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/animate.min.css"&gt;
+&lt;!--====== Slick ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/slick.min.css"&gt;
+&lt;!--====== Main Style ======--&gt;
+&lt;link rel="stylesheet" href="assets/css/style.css"&gt;
+</code>
+</pre>
+            </section>
+
+            <section id="javascript_structure">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Javascript Structure</h3>
+                </div>
+                <p>Followings are the <strong>JS</strong> files which loaded before the end of <strong>HEAD or BODY
+                        Section:</strong>.</p>
+                <pre class="line-numbers">
+<code class="language-markup">
+&lt;!--====== Jquery ======--&gt;
+&lt;script src="assets/js/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Bootstrap ======--&gt;
+&lt;script src="assets/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Appear Js ======--&gt;
+&lt;script src="assets/js/appear.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Slick ======--&gt;
+&lt;script src="assets/js/slick.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Magnific Popup ======--&gt;
+&lt;script src="assets/js/jquery.magnific-popup.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Nice Select ======--&gt;
+&lt;script src="assets/js/jquery.nice-select.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Skill bar ======--&gt;
+&lt;script src="assets/js/skill.bars.jquery.min.js"&gt;&lt;/script&gt;
+&lt;!--====== Isotope ======--&gt;
+&lt;script src="assets/js/isotope.pkgd.min.js"&gt;&lt;/script&gt;
+&lt;!--  WOW Animation --&gt;
+&lt;script src="assets/js/wow.min.js"&gt;&lt;/script&gt;
+&lt;!-- Custom script --&gt;
+&lt;script src="assets/js/script.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+            </section>
+
+
+
+            <section id="html_structure">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">HTML Structure</h3>
+                </div>
+                The <Strong>Lezar</Strong> is a responsive template and is based on the <strong>Bootstrap
+                    Framework</strong>. For more information you can check the <a target="_blank"
+                    href="https://getbootstrap.com/"><strong>Bootstrap CSS</strong></a>.
+                <p>The general template structure is the same throughout the template and each of the part is under a
+                    section with a section id name. Here is the <strong>general structure:</strong></p>
+                <pre class="line-numbers">
+<code class="language-markup">
+&lt;!-- Hero Section Start --&gt;
+&lt;section class="hero-section rel z-1 bg-butter"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row align-items-center"&gt;
+            &lt;div class="col-lg-6 col-md-8 col-sm-10"&gt;
+                &lt;div class="hero-content my-220"&gt;
+                   &lt;span class="bg-text">Beauty&lt;/span&gt;
+                    &lt;h1 class="wow fadeInUp delay-0-2s">Natural Beaulty spa salon&lt;/h1&gt;
+                    &lt;div class="hero-btn mt-30 wow fadeInUp delay-0-4s"&gt;
+                        &lt;a href="about.html" class="theme-btn"&gt;Learn more &lt;i class="fas fa-long-arrow-alt-right"&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="hero-right-image" style="background-image: url(assets/images/hero/hero-right.jpg);"&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- Hero Section End --&gt;
+</code>
+</pre>
+            </section>
+
+
+            <section id="fonts_used">
+                <div class="page-header">
+                    <h3 style="margin-top: 30px; margin-bottom: 12px;">Fonts Used</h3>
+                </div>
+                <p>
+                    Font code can be found in the &quot;<strong>_variables.sass</strong>&quot; file path: assets/sass/_variables.sass
+                </p>
+
+                <pre class="line-numbers">
+<code class="language-css">
+// Font Family
+$base-font: 'Open Sans', sans-serif
+$heading-font: 'Montserrat', sans-serif
+$script-font: 'Dancing Script', cursive
+</code>
+</pre>
+            </section>
+
+            <section id="color-change-option">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Main Color Change Option</h3>
+                </div>
+                <p>File path: assets/sass/_variables.sass</p>
+
+                <pre class="line-numbers">
+<code class="language-css">
+// colors
+$base-color: #696969
+$heading-color: #242424
+$primary-color: #F6E9E4
+$secondary-color: #799AA1
+</code>
+</pre>
+            </section>
+
+           
+            <section id="email-change-option">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Contact Email and Subject Change Option</h3>
+                </div>
+                <p>File path: assets/php/form-process.php</p>
+
+                <pre class="line-numbers">
+<code class="language-css">
+// Email and Subject
+$EmailTo = "yourmail@domain.com";
+$bodySubject = "New Message Received";
+</code>
+</pre>
+            </section>
+           
+           
+            <section id="run-scss">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Run SASS File</h3>
+                </div>
+                <p>Please open the file Visual Studio Code Editor.</p>
+                <p>And following the video tutorial.</p>
+                <p><strong>Here the Link: <a href="https://www.youtube.com/watch?v=0MWmv1Gvv5w"
+                            target="_blank">https://www.youtube.com/watch?v=0MWmv1Gvv5w</a></strong></p>
+            </section>
+
+            <section id="slider-edit">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Slick Edit Option</h3>
+                </div>
+                <p>File path: assets/js/script.js</p>
+
+                <pre class="line-numbers">
+<code class="language-css">
+// 09. Client Logos
+if ($('.client-logo-wrap').length) {
+    $('.client-logo-wrap').slick({
+        dots: false,
+        infinite: true,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        arrows: false,
+        speed: 1000,
+        focusOnSelect: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 375,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    });
+}
+
+</code>
+</pre>
+                <p><strong>More Info please browser the link: <a href="https://kenwheeler.github.io/slick/"
+                            target="_blank">Slick Docs Options</a></strong></p>
+            </section>
+
+            <section id="scroll-animation">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Hide Scroll Animation</h3>
+                </div>
+                <p>Please remove or comment the below code file path: assets/js/script.js</p>
+                <pre class="line-numbers">
+<code class="language-css">
+
+// 23. WOW Animation
+if ($('.wow').length) {
+    var wow = new WOW({
+        boxClass: 'wow', // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: false, // trigger animations on mobile devices (default is true)
+        live: true // act on asynchronously loaded content (default is true)
+    });
+    wow.init();
+}
+</code>
+</pre>
+                </section>
+
+				<section id="preloader-hide">
+                    <div class="page-header">
+                        <h3 style="margin-top: 0; margin-bottom: 12px;">How to edit/off Preloader</h3>
+                    </div>
+                    <p>Please remove or comment the below code file path: assets/js/script.js</p>
+<pre class="line-numbers">
+<code class="language-css">
+// 25. Preloader
+function handlePreloader() {
+    if ($('.preloader').length) {
+        $('.preloader').delay(200).fadeOut(500);
+    }
+}
+handlePreloader();
+</code>
+</pre>
+
+                <p>Also, please remove or comment the above code all HTML files</p>
+                <pre class="line-numbers">
+<code class="language-css">
+&lt;!-- Preloader --&gt;
+&lt;div class="preloader"&gt;&lt;/div&gt;
+</code>
+</pre>
+            </section>
+
+            <section id="speed-optimization">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Speed Optimization</h3>
+                </div>
+
+                <p>Please optimize all images KB, MB also, use the image size following by placeholder file path:
+                    assets/images/..</p>
+                <p>- <a href="https://tinypng.com/" target="_blank">Tinypng</a></p>
+
+                <p>Please minify all CSS file path: assets/css/..</p>
+                <p>- <a href="https://cssminifier.com/" target="_blank">CSS Minifier</a></p>
+
+
+                <p>Please minify all JS file path: assets/js/..</p>
+                <p>- <a href="https://javascript-minifier.com/" target="_blank">Javascript Minifier</a></p>
+            </section>
+
+            <section id="how-to-change-image">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Change Image?</h3>
+                </div>
+
+                <p>Please go to the image file 'path: assets/images/...' replace the image which one you want following
+                    placeholder image size & name</p>
+            </section>
+
+            <section id="flaticon-edit">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Edit Especially For Flaticon</h3>
+                </div>
+
+                <p>You won't able to add new flaticon except existing but you can if you want to add from scratch but
+                    existing will not work and it's the feature of flaticon. <a href="https://www.flaticon.com/"
+                        target="_blank">Flaticon.com</a>
+            </section>
+
+
+
+            <section id="how-to-change-images">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">How to Add New Updates of Existing Template</h3>
+                </div>
+
+                <p>
+                    After a certain time, we will update our project based on the latest technology but in your
+                    template, you need to update on your own if you want.
+                </p>
+            </section>
+
+            <section id="credits">
+                <div class="page-header">
+                    <h3 style="margin-top: 0; margin-bottom: 12px;">Credits</h3>
+                </div>
+                <p><strong>Note:</strong> All <strong>images</strong> are used for <strong>preview</strong> purpose only
+                    and <strong>not included</strong> in the <strong>final purchase</strong> files.</p>
+                <p> <strong>Images from:</strong><br />
+                    <a target="_blank" href="https://www.freepik.com/">https://www.freepik.com/</a><br />
+                    <a target="_blank" href="https://pixabay.com/">https://pixabay.com/</a><br />
+                    <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a><br />
+                </p>
+                <p>
+                    <strong>Fonts:</strong><br />
+                    <a target="_blank" href="https://fonts.google.com/specimen/Mulish?query=Mulish">Mulish</a><br />
+                    <a target="_blank" href="https://fonts.google.com/specimen/Oswald?query=Oswald">Oswald</a><br />
+                </p>
+                <p>
+                    <strong>IconFont</strong><br>
+                    <a href="https://fontawesome.com/" target="_blank">Fontawesome</a><br>
+                    <a href="https://www.flaticon.com/" target="_blank">Flaticon Images</a><br>
+                </p>
+            </section>
+
+
+        </article>
+        <!-- END Main content -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-fluid"> <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+
+                </div>
+                <div class="col-md-6 col-sm-6">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+
+
+    <!-- Scripts -->
+    <script src="js/other.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

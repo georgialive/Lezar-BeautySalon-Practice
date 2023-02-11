@@ -1,0 +1,132 @@
+/*******************************************************/
+/***************** 19. Pricing Section *****************/
+/*******************************************************/
+.pricing-wrap
+    margin-bottom: 30px
+    padding: 40px 50px 25px
+    border: 1px solid transparentize($secondary-color, 0.8)
+    +ms-d
+        +gapLeftRight(padding, 25px)
+    +xs-d
+        +gapLeftRight(padding, 15px)
+.pricing-item
+    display: flex
+    margin-bottom: 30px
+    padding-bottom: 20px
+    border-bottom: 1px solid transparentize($secondary-color, 0.8)
+    +sm-d
+        display: block
+    &:last-child
+        margin-bottom: 0
+        padding-bottom: 0
+        border-bottom: none
+    > i
+        flex: none
+        font-size: 60px
+        line-height: 1.7
+        margin-right: 25px
+        color: $yellow-color
+.pricing-content
+    width: 100%
+    .pricing-title
+        margin-bottom: 5px
+        +flexcenter(space-between)
+        h5
+            font-size: 24px
+            font-weight: 600
+            margin-bottom: 0
+            +xs-d
+                font-size: 20px
+        .price
+            font-size: 24px
+            font-weight: 600
+            color: $yellow-color
+            font-family: $heading-font
+            +xs-d
+                font-size: 20px
+            &:before
+                content: '$'
+    p
+        margin-bottom: 0
+        
+.price-left-shape
+    position: absolute
+    left: 0
+    top: 0
+    z-index: -1
+    max-width: 30%
+    
+.price-bg-shape
+    position: absolute
+    left: 50%
+    z-index: -1
+    bottom: 5%
+    max-width: 90%
+    transform: translateX(-50%)
+    
+.home-two
+    .pricing-item > i,
+    .pricing-title .price
+        color: $secondary-color
+        
+/* Pricing Style two */
+.pricing-section-two
+    .price-shape
+        position: absolute
+        left: 6%
+        bottom: 5%
+        z-index: -1
+        max-width: 20%
+    .circle
+        position: absolute
+        right: 5%
+        top: 10%
+        z-index: -1
+        max-width: 20%
+        animation: rotated_circle 20s infinite
+.pricing-item-two
+    position: relative
+    background: white
+    z-index: 1
+    padding: 50px 35px
+    margin-bottom: 30px
+    border: 25px solid $light-gray-color
+    +sm-d
+        border-width: 10px
+    +xs-d
+        +gapLeftRight(padding, 15px)
+    h5
+        font-weight: 600
+        text-align: center
+    .price
+        display: block
+        line-height: 1
+        font-size: 50px
+        text-align: center
+        margin-bottom: 40px
+        color: $yellow-color
+        font-family: $script-font
+        &:before
+            content: "$"
+    h6
+        line-height: 1.8
+        margin-bottom: 20px
+    &:before
+        position: absolute
+        content: ''
+        z-index: -1
+        left: 0
+        top: 0
+        opacity: 0
+        +size(100%)
+        transition: 0.5s
+        border: 1px solid $yellow-color
+    &:hover
+        &:before
+            opacity: 1
+        .theme-btn
+            background: $yellow-color
+            border-color: $yellow-color
+            &:hover
+                border-color: $heading-color
+    

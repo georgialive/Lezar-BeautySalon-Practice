@@ -1,0 +1,233 @@
+/*******************************************************/
+/***************** 22. Services Section ****************/
+/*******************************************************/
+.service-item
+    text-align: center
+    position: relative
+    margin-bottom: 60px
+    padding-bottom: 60px
+    img
+        width: 100%
+    .service-content
+        position: absolute
+        width: 84%
+        left: 8%
+        bottom: 0
+        padding: 25px
+        transition: 0.5s
+        background: white
+        box-shadow: 10px 4px 60px rgba(0, 0, 0, 0.1)
+        > i
+            +size(70px)
+            line-height: 70px
+            position: absolute
+            bottom: 100%
+            left: 0
+            color: white
+            font-size: 35px
+            background: $yellow-color
+        h5
+            font-weight: 600
+            margin-bottom: 8px
+        .read-more
+            font-size: 14px
+    &:hover
+        .service-content
+            transform: translateY(-15px)
+        
+/* Service Style Two */
+.service-item-two
+    z-index: 1
+    transition: 0.5s
+    padding: 40px 28px
+    position: relative
+    margin-bottom: 30px
+    border: 1px solid $border-color
+    .image
+        position: relative
+        margin-bottom: 40px
+        display: inline-block
+        .bg-text
+            top: 66%
+            font-size: 100px
+        img
+            +size(125px)
+            border-radius: 50%
+        .icon
+            +circle(white, 45px)
+            position: absolute
+            top: 0
+            right: 0
+            font-size: 16px
+            transition: 0.5s
+            color: $yellow-color
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
+    h5
+        font-size: 20px
+        font-weight: 600
+        margin-bottom: 10px
+    p
+        margin-bottom: 0
+    &:hover
+        background: #F9F9F9
+        border-color: #F9F9F9
+        .icon
+            color: white
+            background: $yellow-color
+    
+/* Services Page */
+.popular-services
+    .white-leaf
+        position: absolute
+        left: 4%
+        bottom: 0
+        z-index: -1
+        max-width: 20%
+    .color-leaf
+        position: absolute
+        right: 0
+        z-index: -1
+        bottom: 10%
+        max-width: 20%
+        animation: down-up-one 5s infinite
+    .circle
+        position: absolute
+        right: 5%
+        top: 10%
+        z-index: -1
+        max-width: 20%
+        animation: rotated_circle 20s infinite
+.popular-service-item
+    display: block
+    transition: 0.5s
+    text-align: center
+    padding: 30px 5px
+    margin-bottom: 30px
+    background: $light-gray-color
+    border: 1px solid transparentize($yellow-color, 0.8)
+    i
+        line-height: 1
+        font-size: 65px
+        transition: 0.5s
+        margin-bottom: 10px
+        color: $yellow-color
+        display: inline-block
+    h5
+        font-size: 20px
+        transition: 0.5s
+        font-weight: 600
+        margin-bottom: 0
+    &:hover
+        background: $yellow-color
+        i, h5
+            color: white
+    
+/* Services Page Video Secion */
+.video-section-two
+    height: 600px
+    +overlay(black, 0.4)
+    background-size: cover
+    background-position: center
+    +lg-d
+        height: 500px
+    +tb-d
+        height: 400px
+    +mo-d
+        height: 300px
+    &:before
+        z-index: 1
+    .video-play
+        color: white
+        border: 1px solid
+        background: transparent
+        +mo-d
+            +size(80px)
+            line-height: 78px
+        
+/* Service Details */
+.service-details
+    font-size: 16px
+.service-details-content-wrap
+    img
+        margin-bottom: 30px
+    p, h3
+        margin-bottom: 15px
+    h3
+        font-weight: 600
+        +sm-d
+            font-size: 25px
+.service-details-content
+    padding-left: 95px
+    +ms-d
+        padding-left: 0
+    .list-style-one
+        display: flex
+        flex-wrap: wrap
+        li
+            width: 50%
+            color: $heading-color
+            +mo-d
+                width: 100%
+            &:before
+                +size(20px)
+                flex: none
+                color: white
+                margin-top: 4px
+                font-size: 10px
+                line-height: 20px
+                background: $yellow-color
+    &.icon-before
+        position: relative
+        &:before
+            font-family: flaticon
+            position: absolute
+            line-height: 1.3
+            content: ""
+            left: 0
+            top: 0
+            font-size: 65px
+            color: $yellow-color
+            +ms-d
+                display: none
+        
+/* Next Prev Service */
+.next-prev-service
+    +flexcenter(space-between)
+    .all-services
+        margin: 15px
+        font-size: 20px
+        color: $yellow-color
+    .nps-item
+        display: flex
+        align-items: center
+        +ms-d
+            flex-wrap: wrap
+        > a
+            width: 40%
+            max-width: 100px
+            +ms-d
+                width: 100%
+            img
+                margin-bottom: 0
+                +ms-d
+                    margin-bottom: 15px
+        &.prev-item
+            > a
+                margin-right: 25px
+        &.next-item
+            text-align: right
+            justify-content: end
+            > a
+                margin-left: 25px
+        .nps-content
+            +ms-d
+                order: 2
+            h6
+                font-size: 16px
+                font-weight: 600
+                margin-bottom: 5px
+            span
+                display: block
+                font-size: 14px
+            .read-more
+                font-size: 14px

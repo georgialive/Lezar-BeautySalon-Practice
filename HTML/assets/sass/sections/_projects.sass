@@ -1,0 +1,441 @@
+/*******************************************************/
+/***************** 12. Projects Section ****************/
+/*******************************************************/
+.project-item
+    overflow: hidden
+    margin-bottom: 60px
+    position: relative
+    max-width: max-content
+    +mo-d
+        margin-top: 0
+    +md-d
+        max-width: 100%
+        img
+            width: 100%
+    &:hover
+        .project-content
+            opacity: 1
+            transform: translate(0)
+.project-content
+    position: absolute
+    bottom: 20px
+    right: 20px
+    opacity: 0
+    max-width: 250px
+    background: white
+    padding: 25px 35px
+    transition: 0.4s linear
+    width: calc(100% - 40px)
+    transform: translate(110%)
+    h5
+        margin: 0
+        font-size: 20px
+        text-align: center
+.project-btn
+    margin-top: -55px
+    +mo-d
+        margin-top: 0
+    
+/* Project Two */
+.project-section-two
+    +gapLeftRight(padding, 55px)
+    +lg-d
+        +gapLeftRight(padding, 0)
+.project-item-two
+    margin-bottom: 30px
+    +overlay(black, 0.4)
+    &:before
+        z-index: 2
+    img
+        width: 100%
+    .project-content-two
+        position: absolute
+        z-index: 3
+        top: 40px
+        left: 40px
+        display: flex
+        padding: 50px 35px
+        text-align: center
+        align-items: center
+        flex-direction: column
+        justify-content: center
+        width: calc(100% - 80px)
+        height: calc(100% - 80px)
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        +project-d
+            top: 20px
+            left: 20px
+            width: calc(100% - 40px)
+            height: calc(100% - 40px)
+            +gapLeftRight(padding, 15px)
+        +tb-d
+            top: 20px
+            left: 20px
+            width: calc(100% - 40px)
+            height: calc(100% - 40px)
+            +gapLeftRight(padding, 15px)
+    h3
+        color: white
+        font-size: 65px
+        line-height: 1.1
+        margin-bottom: 20px
+        font-family: $script-font
+        +project-d
+            font-size: 45px
+        +ms-d
+            font-size: 55px
+    h5
+        color: white
+        font-size: 24px
+        margin-bottom: 28px
+        +ms-d
+            font-size: 20px
+    .theme-btn
+        flex: none
+        font-size: 15px
+        padding: 9px 30px
+    .bg-text
+        color: white
+        top: 50%
+        left: 50%
+        opacity: 0.2
+        font-size: 250px
+        transform: translate(-50%, -50%)
+        +lg-d
+            font-size: 150px
+        +md-d
+            font-size: 100px
+        +ms-d
+            font-size: 70px
+        +sm-d
+            font-size: 40px
+    &.big-item
+        .project-content-two
+            text-align: left
+            align-items: start
+            +gapLeftRight(padding, 50px)
+            +mo-d
+                +gapLeftRight(padding, 25px)
+        h3
+            font-size: 90px
+            max-width: 400px
+            +project-d
+                font-size: 55px
+            +tb-d
+                font-size: 55px
+            +ms-d
+                font-size: 35px
+        h5
+            font-size: 30px
+            +xs-d
+                display: none
+        .theme-btn
+            +xs-d
+                display: none
+    &.video-item
+        .project-content-two
+            left: 70px
+            top: 70px
+            padding: 0
+            width: calc(100% - 140px)
+            height: calc(100% - 140px)
+            +tb-d
+                top: 20px
+                left: 20px
+                width: calc(100% - 40px)
+                height: calc(100% - 40px)
+        .video-play
+            color: $yellow-color
+            +xl-d
+                +size(155px)
+                line-height: 155px
+            +ms-d
+                +size(75px)
+                line-height: 75px
+            +xs-d
+                +size(45px)
+                font-size: 16px
+                line-height: 45px
+    
+/* Gallery Section */
+.gallery-section
+    +gapLeftRight(padding, 55px)
+    +lg-d
+        +gapLeftRight(padding, 0)
+.gallery-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +gapLeftRight(margin, -15px)
+.gallery-item
+    position: relative
+    margin: 0 15px 30px
+    width: calc(20% - 30px)
+    img
+        width: 100%
+    +md-d
+        width: calc(25% - 30px)
+    +tb-d
+        width: calc(50% - 30px)
+    +sm-d
+        width: calc(100% - 30px)
+    &.big-item
+        width: calc(40% - 30px)
+        +md-d
+            width: calc(25% - 30px)
+        +tb-d
+            width: calc(50% - 30px)
+        +sm-d
+            width: calc(100% - 30px)
+    &:hover
+        .gallery-overlay
+            opacity: 1
+    .gallery-overlay
+        position: absolute
+        +size(100%)
+        left: 0
+        top: 0
+        opacity: 0
+        transition: 0.5s
+        +flexcenter(center)
+        background: rgba(0, 0, 0, 0.65)
+        a
+            color: white
+            +circle($secondary-color, 60px)
+            
+/* Instagram Image Gallery */
+.instagram-section
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +gapLeftRight(padding, 70px)
+    +gapLeftRight(margin, -15px)
+    +lg-d
+        +gapLeftRight(padding, 15px)
+    .instagram-item
+        margin: 0 15px 30px
+        width: calc(20% - 30px)
+        +overlay(black, 0)
+        &:before
+            z-index: 1
+            transition: 0.5s
+        +lg-d
+            width: calc(33.33% - 30px)
+        +ms-d
+            width: calc(50% - 30px)
+        +sm-d
+            width: calc(100% - 30px)
+        img
+            width: 100%
+        a
+            position: absolute
+            left: 50%
+            top: 50%
+            z-index: 2
+            opacity: 0
+            color: white
+            font-size: 55px
+            transition: 0.5s
+            transform: translate(-50%, -50%)
+        &:hover
+            a
+                opacity: 1
+            &:before
+                opacity: 0.4
+            
+/* Portfolio Grid */
+.portfolio-section
+    +gapLeftRight(padding, 55px)
+    +lg-d
+        +gapLeftRight(padding, 15px)
+    +mo-d
+        +gapLeftRight(padding, 0)
+.portfolio-filter
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    li
+        margin: 5px
+        cursor: pointer
+        font-size: 16px
+        transition: 0.5s
+        font-weight: 600
+        padding: 5px 25px
+        color: $heading-color
+        background: $light-gray-color
+        +xs-d
+            padding: 5px 20px
+        &:hover,
+        &.current
+            color: white
+            background: $yellow-color
+.portfolio-item
+    position: relative
+    margin-bottom: 30px
+    img
+        width: 100%
+    .portfolio-content
+        position: absolute
+        bottom: 80px
+        right: 0
+        left: 0
+        margin: auto
+        display: flex
+        width: max-content
+        flex-direction: column
+        h6, b
+            opacity: 0
+            transition: 0.5s
+            font-weight: 600
+            margin-left: 25px
+        h6
+            color: white
+            margin-bottom: 0
+            padding: 10px 20px
+            background: $yellow-color
+            a
+                color: white
+        b
+            font-size: 14px
+            background: white
+            padding: 5px 20px
+            width: max-content
+            color: $heading-color
+            font-family: $heading-font
+    &:hover
+        .portfolio-content
+            h6, b
+                opacity: 1
+                margin-left: 0
+            b
+                transition-delay: 0.2s
+                
+/* Portfolio Details */
+.portfolio-details
+    font-size: 16px
+    img, p
+        margin-bottom: 30px
+    h3
+        font-size: 35px
+        margin-bottom: 20px
+        +sm-d
+            font-size: 30px
+        +xs-d
+            font-size: 25px
+.portfolio-details-content
+    margin-bottom: 55px
+    &.table-left
+        margin-right: 50px
+        +tb-d
+            margin-right: 0
+.first-letter-big
+    &::first-letter
+        color: white
+        float: left
+        font-size: 30px
+        line-height: 1.3
+        font-weight: 600
+        padding: 8px 12px
+        margin-right: 15px
+        background: $heading-color
+.portfolio-details-list
+    border: 1px solid $border-color
+    font-size: 18px
+    li
+        display: flex
+        padding: 20px 25px
+        align-items: center
+        border-bottom: 1px solid $border-color
+        +xs-d
+            padding: 15px
+            font-size: 16px
+        &:last-child
+            border-bottom: none
+        h5
+            width: 30%
+            flex: none
+            font-size: 20px
+            margin-bottom: 0
+            font-weight: 600
+            text-transform: capitalize
+        .symbol
+            +gapLeftRight(margin, 25px)
+            +xs-d
+                margin-right: 15px
+.portfolio-middle-images
+    img
+        width: 100%
+.portfolio-details-testimonial
+    +container(760px)
+    position: relative
+    &:before
+        content: ""
+        left: 50%
+        top: -25px
+        color: black
+        opacity: 0.06
+        line-height: 1
+        font-size: 150px
+        position: absolute
+        font-family: flaticon
+        transform: translate(-50%)
+    .feedback-content-item
+        font-size: 30px
+        line-height: 1.5
+        +sm-d
+            font-size: 25px
+        +xs-d
+            font-size: 20px
+    .author-description
+        justify-content: center
+        +xs-d
+            text-align: center
+        img
+            margin-bottom: 0
+            +xs-d
+                margin-bottom: 15px
+            
+/* Tags and Share */
+.tag-share
+    .tags,
+    .share
+        display: flex
+        align-items: center
+        +gapTopBottom(padding, 5px)
+        +sm-d
+            display: block
+            h5
+                margin-bottom: 10px
+    h5
+        color: black
+        font-size: 20px
+        font-weight: 600
+        margin: 0 20px 0 0
+    .tags
+        a
+            &:after
+                content: ','
+                margin-right: 3px
+            &:last-child:after
+                content: ''
+        
+.portfolio-footer
+    display: flex
+    border: 1px solid $border-color
+    +mo-d
+        display: block
+    .tags,
+    .share
+        width: 50%
+        padding: 25px
+        justify-content: center
+        border-right: 1px solid $border-color
+        +mo-d
+            width: 100%
+            border-right: none
+            border-bottom: 1px solid $border-color
+        &:last-child
+            border-right: none
+            +mo-d
+                border-bottom: none
+        

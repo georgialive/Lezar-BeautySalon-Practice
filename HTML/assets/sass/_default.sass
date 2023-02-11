@@ -1,0 +1,169 @@
+/*******************************************************/
+/******************* 01. Default Style *****************/
+/*******************************************************/
+*
+    margin: 0
+    padding: 0
+    border: none
+    outline: none
+    box-shadow: none
+
+body
+    color: $base-color
+    background: white
+    font-weight: 400
+    line-height: 1.8
+    font-size: $base-size
+    font-family: $base-font
+
+a
+    color: $base-color
+    cursor: pointer
+    outline: none
+    transition: 0.5s
+    text-decoration: none
+    &:hover, &:focus, &:visited
+        text-decoration: none
+        outline: none
+    &:hover
+        color: #FFAF7B
+
+.home-two a:hover
+    color: $secondary-color
+    
+h1, h2, h3, h4, h5, h6
+    @extend %heading
+    margin-bottom: 12px
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+    color: $heading-color
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white h1 a,
+.text-white h2 a,
+.text-white h3 a,
+.text-white h4 a,
+.text-white h5 a,
+.text-white h6 a
+    color: white
+
+h1
+    font-size: $h1-size
+
+h2
+    font-size: $h2-size
+
+h3
+    line-height: 1.5
+    font-size: $h3-size
+
+h4
+    line-height: 1.4
+    font-size: $h4-size
+
+h5
+    font-size: $h5-size
+
+h6
+    font-size: $h6-size
+
+ul, li
+    list-style: none
+    padding: 0
+    margin: 0
+
+img
+    max-width: 100%
+    display: inline-block
+ 
+header, section, footer
+    +clearfix
+
+/*======= Input Styles =======*/
+input,
+select,
+textarea,
+.nice-select,
+.form-control
+    width: 100%
+    height: auto
+    border-radius: 0
+    padding: 22px 30px
+    background-color: #fff
+    border: 1px solid $border-color
+    
+.nice-select
+    font-size: 18px
+    line-height: 1.3
+    &:after
+        height: 8px
+        width: 8px
+        right: 25px
+        border-color: $heading-color
+    .current
+        font-weight: 600
+        color: $heading-color
+        font-family: $heading-font
+    .list
+        width: 100%
+        border-radius: 0
+    
+textarea
+	display: inherit
+	padding-top: 20px
+
+label
+    cursor: pointer
+    font-weight: 500
+    margin-bottom: 5px
+    color: $base-color
+
+.form-group
+    position: relative
+    margin-bottom: 30px
+    label
+        top: 20px
+        right: 30px
+        font-size: 16px
+        position: absolute
+    
+input:focus,
+button:focus,
+.form-control:focus
+    outline: none
+    box-shadow: none
+    border-color: #cfdbf1
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder,
+.form-control::placeholder
+    font-weight: 600
+    color: $heading-color
+    font-family: $heading-font
+    
+input[type=search]::-ms-clear
+	display: none
+	width: 0
+	height: 0
+
+input[type=search]::-ms-reveal
+	display: none
+	width: 0
+	height: 0
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration
+	display: none
+
+input[type=checkbox], input[type=radio]
+	height: auto
+	width: auto
+    

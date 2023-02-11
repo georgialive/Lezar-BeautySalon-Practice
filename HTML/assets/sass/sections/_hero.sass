@@ -1,0 +1,116 @@
+/*******************************************************/
+/******************* 07. Hero Section ******************/
+/*******************************************************/
+.hero-section
+    .container
+        max-width: 1350px
+.hero-content
+    z-index: 1
+    position: relative
+    +lg-d
+        +gapTopBottom(margin, 150px)
+    +tb-d
+        margin-bottom: 100px
+    .bg-text
+        font-size: 250px
+        transform: translate(-50px, -58%)
+        +lg-d
+            font-size: 200px
+        +md-d
+            font-size: 150px
+            transform: translate(-15px, -50%)
+        +mo-d
+            font-size: 100px
+        +ms-d
+            font-size: 75px
+    h1
+        letter-spacing: -3px
+        text-transform: uppercase
+        +lg-d
+            font-size: 75px
+        +md-d
+            font-size: 65px
+        +mo-d
+            font-size: 50px
+        +ms-d
+            font-size: 40px
+    
+.hero-right-image
+    height: 100%
+    width: 50vw
+    right: 0
+    top: 0
+    z-index: -1
+    overflow: hidden
+    position: absolute
+    +flexcenter(center)
+    background-size: cover
+    
+/*Hero Two*/
+.hero-section-two
+    .hero-right-image
+        img
+            &:nth-child(2)
+                position: absolute
+                left: 0
+                bottom: 0
+                height: 100%
+                max-width: none
+                +mo-d
+                    display: none
+.hero-content-two
+    +lg-d
+        +gapTopBottom(margin, 200px)
+    +mo-d
+        margin-top: 150px
+        margin-bottom: 100px
+    h1
+        color: white
+        +lg-d
+            font-size: 70px
+        +md-d
+            font-size: 60px
+        +mo-d
+            font-size: 50px
+        +ms-d
+            font-size: 45px
+        +sm-d
+            font-size: 40px
+        +xs-d
+            font-size: 35px
+    .sub-title
+        color: white
+        display: block
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 10px
+        +xs-d
+            font-size: 20px
+    .list-style-two
+        display: flex
+        flex-wrap: wrap
+        li
+            width: 50%
+            color: white
+            +ms-d
+                width: 100%
+            +xs-d
+                font-size: 16px
+    .hero-btn
+        .theme-btn
+            margin-right: 20px
+            &:last-chile
+                margin-right: 0
+.hero-green-lear
+    position: absolute
+    left: 0
+    bottom: 0
+    z-index: -1
+    max-width: 20%
+.hero-three-shapes
+    position: absolute
+    top: 20%
+    left: 8%
+    z-index: -1
+    max-width: 8%
+    animation: shapeAnimationOne 30s infinite

@@ -1,0 +1,117 @@
+/*******************************************************/
+/***************** 20. Contact Section *****************/
+/*******************************************************/
+.contact-from
+    .theme-btn
+        padding: 18px 15px
+        
+.contact-left-image,
+.contact-right-image
+    position: absolute
+    width: 33.33%
+    z-index: -1
+    +mo-d
+        display: none
+    
+.contact-left-image
+    left: 0
+    bottom: -70px
+    transform: translateX(-50%)
+    
+.contact-right-image
+    right: 0
+    top: -70px
+    transform: translateX(50%)
+    img:nth-child(2)
+        position: absolute
+        bottom: -80px
+        right: -60px
+        z-index: -2
+        max-width: 50%
+        animation: rotated_circle 20s infinite
+        +lg-d
+            left: -80px
+    
+/* Team Page Contact */
+.team-contact-left
+    .read-more
+        color: white
+        opacity: 0.8
+        font-size: 18px
+        border-bottom: 2px solid
+        &:hover
+            opacity: 1
+.team-page-form
+    .nice-select,
+    .form-control
+        +gapTopBottom(padding, 17px)
+.team-contact-circle
+    position: absolute
+    bottom: 10%
+    right: 10%
+    max-width: 30%
+    animation: rotated_circle 20s infinite
+    
+/* Faq Page Contact */
+.faq-contact-content
+    margin-left: 65px
+    +md-d
+        margin-left: 0
+    .form-group
+        position: relative
+        label
+            position: absolute
+            top: 13px
+            right: 0
+            font-size: 16px
+            color: $yellow-color
+        .nice-select,
+        .form-control
+            border: none
+            padding: 15px 0
+            transition: 0.5s
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+            &:focus
+                border-color: black
+        .nice-select:after
+            right: 0
+            border-color: $yellow-color
+            
+/* Contact Page */
+.contact-info-item
+    text-align: center
+    background: #F9F9F9
+    margin-bottom: 30px
+    padding: 40px 55px 20px
+    height: calc(100% - 30px)
+    border: 1px solid rgba(0, 0, 0, 0.07)
+    +mo-d
+        +gapLeftRight(padding, 25px)
+    > i
+        font-size: 45px
+        margin-bottom: 25px
+        color: $yellow-color
+        +circle(white, 100px)
+        box-shadow: 10px 4px 60px rgba(214, 185, 129, 0.2)
+    p
+        a
+            font-weight: 600
+.contact-page-map
+    iframe
+        height: 785px
+        +lg-d
+            height: 600px
+        +md-d
+            height: 500px
+        +mo-d
+            height: 400px
+        
+/* Contact Form Validation */
+.has-error
+    .with-errors
+        color: red
+        margin-top: 5px
+        margin-bottom: -15px
+#msgSubmit
+    margin-bottom: 0
+    margin-top: 10px

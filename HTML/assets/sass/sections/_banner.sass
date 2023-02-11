@@ -1,0 +1,49 @@
+/*******************************************************/
+/******************* 21. Page Banner *******************/
+/*******************************************************/
+.page-banner
+    +overlay(black, 0.6)
+    background-size: cover
+    background-position: center
+.banner-inner
+    position: relative
+    h1
+        text-transform: capitalize
+        +tb-d
+            font-size: 65px
+        +mo-d
+            font-size: 45px
+        +sm-d
+            font-size: 38px
+        +xs-d
+            font-size: 33px
+    +xl-d
+        .bg-text
+            transform: translate(-50px, -50%)
+    &.text-center
+        .bg-text
+            transform: translate(-50%, -50%)
+        .breadcrumb
+            justify-content: center
+.breadcrumb
+    margin: 0
+    padding: 0
+    font-size: 35px
+    background: transparent
+    text-transform: capitalize
+    +mo-d
+        font-size: 25px
+    +sm-d
+        font-size: 20px
+    .breadcrumb-item
+        +flexcenter(center)
+        &.active
+            color: white
+            text-decoration: underline
+            text-decoration-thickness: 1px
+        &+.breadcrumb-item::before
+            +gapLeftRight(margin, 33px)
+            +circle(white, 10px)
+            content: ''
+            +mo-d
+                +gapLeftRight(margin, 15px)

@@ -1,0 +1,314 @@
+/*******************************************************/
+/******************* 17. News Section ******************/
+/*******************************************************/
+.news-section
+    .row
+        +colgap(40px)
+.news-item
+    margin-bottom: 40px
+    border-bottom: 1px solid $border-color
+    &:last-child
+        margin-bottom: 0
+        border-bottom: none
+    .image
+        margin-bottom: 30px
+        img
+            width: 100%
+    .news-header
+        +flexcenter(start)
+        margin-bottom: 40px
+        .date
+            padding: 20px
+            font-weight: 500
+            line-height: 1.35
+            margin-right: 30px
+            background: #F9F9F9
+            width: min-content
+            text-transform: uppercase
+            font-family: $heading-font
+            +md-d
+                margin-right: 20px
+            +ms-d
+                width: auto
+                margin-right: 0
+                margin-bottom: 15px
+            span
+                line-height: 1
+                font-size: 50px
+                @extend %heading
+                margin-bottom: 10px
+                display: inline-block
+                +ms-d
+                    font-size: 35px
+                    margin-right: 2px
+        +ms-d
+            display: block
+        h4
+            line-height: 1.35
+            +sm-d
+                font-size: 22px
+        ul
+            display: flex
+            margin-bottom: 10px
+            li
+                +flexcenter(start)
+                i
+                    margin-right: 10px
+                    +xs-d
+                        display: none
+                &:after
+                    content: ''
+                    +gapLeftRight(margin, 20px)
+                    +circle(transparentize($heading-color, 0.85), 5px)
+                    +md-d
+                        +gapLeftRight(margin, 10px)
+                &:last-child:after
+                    display: none
+        p
+            margin-top: 10px
+    p
+        margin: -10px 0 0
+    &.big-news
+        padding-right: 40px
+        border-bottom: none
+        border-right: 1px solid $border-color
+        +tb-d
+            padding-right: 0
+            border-right: none
+            margin-bottom: 40px
+            padding-bottom: 35px
+            border-bottom: 1px solid $border-color
+        
+/* News Style Two */
+.news-item-two
+    padding: 35px
+    transition: 0.5s
+    margin-bottom: 30px
+    border: 1px solid white
+    box-shadow: 10px 4px 60px rgba(171, 171, 171, 0.25)
+    +xs-d
+        +gapLeftRight(padding, 25px)
+    .title-meta
+        display: flex
+        margin-bottom: 12px
+        li
+            font-size: 16px
+            +flexcenter(start)
+            i
+                margin-right: 10px
+                +xs-d
+                    display: none
+            &:after
+                content: ''
+                +gapLeftRight(margin, 20px)
+                +circle(transparentize($heading-color, 0.85), 5px)
+                +md-d
+                    +gapLeftRight(margin, 10px)
+            &:last-child:after
+                display: none
+    h5
+        font-size: 24px
+        font-weight: 600
+        line-height: 1.4
+        margin-bottom: 30px
+        +xs-d
+            font-size: 20px
+    .image
+        margin-bottom: 22px
+        img
+            width: 100%
+    p
+        margin-bottom: 8px
+    .read-more
+        font-size: 15px
+        font-family: $heading-font
+    &:hover
+        border-color: $yellow-color
+                
+/* Blog Grid Style */
+.blog-grid-item
+    margin-bottom: 60px
+    .image
+        margin-bottom: 30px
+        img
+            width: 100%
+.blog-grid-content
+    ul
+        display: flex
+        font-size: 16px
+        font-weight: 500
+        margin-bottom: 10px
+        text-transform: uppercase
+        li
+            +flexcenter(center)
+            &:after
+                content: ''
+                +gapLeftRight(margin, 15px)
+                +circle(rgba(0, 0, 0, 0.2), 5px)
+            &:last-child:after
+                display: none
+    h5
+        font-size: 24px
+        line-height: 1.45
+        margin-bottom: 30px
+        +xs-d
+            font-size: 20px
+    .theme-btn
+        font-size: 15px
+        padding: 10px 30px
+        
+/* Blog List Style */
+.blog-list-area
+    font-size: 16px
+.blog-list-item
+    margin-bottom: 40px
+    .image
+        img
+            width: 100%
+    .with-video
+        &:before
+            z-index: 1
+        .video-play
+            +size(100px)
+            color: white
+            border: 2px solid
+            line-height: 98px
+            background: transparent
+            +sm-d
+                +size(70px)
+                font-size: 18px
+                line-height: 68px
+    .blog-list-content
+        padding: 40px 55px
+        box-shadow: 10px 4px 60px rgba(173, 173, 173, 0.15)
+        +mo-d
+            +gapLeftRight(padding, 25px)
+        +xs-d
+            +gapLeftRight(padding, 15px)
+        ul
+            margin-bottom: 25px
+            display: inline-flex
+            border: 1px solid $border-color
+            +ms-d
+                padding: 10px
+                display: inline-block
+            li
+                font-size: 15px
+                padding: 5px 25px
+                border-right: 1px solid $border-color
+                +ms-d
+                    border-right: none
+                    display: inline-block
+                    +gapLeftRight(padding, 10px)
+                i
+                    margin-right: 5px
+                &:last-child
+                    border-right: none
+        h4
+            font-weight: 600
+            margin-bottom: 20px
+            +ms-d
+                font-size: 22px
+            +sm-d
+                font-size: 18px
+        p
+            margin-bottom: 30px
+        .theme-btn
+            font-size: 15px
+            padding: 10px 30px
+        .author-description
+            h6
+                margin-bottom: 0
+                font-weight: 600
+                
+/* Blog Details */
+.blog-details-content
+    font-size: 16px
+    line-height: 2
+    .blog-list-content
+        > img
+            margin-bottom: 35px
+        > h5
+            font-size: 24px
+            font-weight: 600
+            margin-bottom: 20px
+        blockquote
+            font-size: 18px
+            font-weight: 600
+            padding-left: 65px
+            color: $heading-color
+            +sm-d
+                padding-left: 25px
+            +xs-d
+                font-size: 16px
+                padding-left: 15px
+            .name
+                display: flex
+                font-size: 15px
+                font-weight: 400
+                margin-top: 10px
+                color: $base-color
+                align-items: center
+                &:before
+                    content: ''
+                    height: 1px
+                    width: 30px
+                    margin-right: 20px
+                    background: $heading-color
+                
+/* Comments */
+.comment-item
+    display: flex
+    margin-bottom: 35px
+    padding-bottom: 40px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+    +sm-d
+        display: block
+    &.child-comment
+        margin-left: 55px
+        +xs-d
+            margin-left: 25px
+    &:last-child
+        margin-bottom: 0
+        padding-bottom: 0
+        border-bottom: none
+    .author-image
+        flex: none
+        max-width: 65px
+        margin: 10px 25px 15px 0
+        img
+            +size(65px)
+            border-radius: 50%
+    .comment-details
+        p
+            margin-bottom: 2px
+    &.admin-comment
+        background: #F9F9F9
+        border-bottom: none
+        padding: 35px 35px 30px
+        +xs-d
+            +gapLeftRight(padding, 15px)
+        .author-image
+            max-width: 100px
+            img
+                +size(100px)
+        .comment-details
+            .name
+                font-weight: 600
+                margin-bottom: 5px
+            .social-style-two
+                a
+                    font-size: 14px
+                    margin-right: 25px
+                    
+/* Comment Form */
+.comment-form
+    background: #F9F9F9
+    padding: 50px 55px 60px
+    +sm-d
+        +gapLeftRight(padding, 25px)
+        .theme-btn
+            +gapLeftRight(padding, 22px)
+    .form-control
+        border: none
+        box-shadow: 10px 4px 60px rgba(0, 0, 0, 0.1)

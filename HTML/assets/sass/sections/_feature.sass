@@ -1,0 +1,60 @@
+/*******************************************************/
+/***************** 11. Feature Section *****************/
+/*******************************************************/
+.features-section-content
+    .section-title
+        +container(550px)
+.features-item-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +gapLeftRight(padding, 25px)
+    +lg-d
+        padding-bottom: 70px
+        +gapLeftRight(padding, 0)
+.feature-item
+    width: 46%
+    display: flex
+    transition: 0.5s
+    margin-top: 55px
+    padding-top: 35px
+    border-top: 1px solid transparentize($heading-color, 0.9)
+    +mo-d
+        width: 100%
+    .icon
+        flex: none
+        font-size: 50px
+        margin-right: 20px
+        color: $heading-color
+        +circle($primary-color, 85px)
+        +xs-d
+            +size(50px)
+            font-size: 25px
+            line-height: 50px
+            margin-right: 15px
+    h4
+        margin: 10px 0 0
+        +xs-d
+            margin-top: 0
+            font-size: 22px
+    &:hover
+        border-color: $heading-color
+.features-image
+    padding: 20px
+    max-width: 440px
+    border-radius: 50% 75%
+    +md-d
+        display: none
+    img
+        width: 100%
+        border-radius: 50% 75%
+    &.left-image
+        border: 1px solid $border-color
+    &.right-image
+        right: 0
+        bottom: 0
+.reatures-leaf
+    position: absolute
+    left: 0
+    top: 10%
+    max-width: 25%
